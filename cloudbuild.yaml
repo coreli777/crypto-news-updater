@@ -1,0 +1,6 @@
+steps:
+- name: 'python:3.11-slim'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - 'pip install anthropic httpx PyGithub && python news_updater.py'
