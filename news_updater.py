@@ -13,9 +13,12 @@ GITHUB_REPO = "coreli777/crypto-site"
 MAX_NEWS = 8
 
 RSS_SOURCES = [
-    {"url": "https://cointelegraph.com/rss", "category": "Крипто"},
-    {"url": "https://coindesk.com/arc/outboundfeeds/rss/", "category": "Биткоин"},
-    {"url": "https://decrypt.co/feed", "category": "Блокчейн"},
+    {"url": "https://decrypt.co/feed", "category": "Крипто"},
+    {"url": "https://cryptonews.com/news/feed/", "category": "Новости"},
+    {"url": "https://cryptoslate.com/feed/", "category": "Рынок"},
+    {"url": "https://ambcrypto.com/feed/", "category": "Аналитика"},
+    {"url": "https://cryptopotato.com/feed/", "category": "Биткоин"},
+    {"url": "https://u.today/rss", "category": "Блокчейн"},
 ]
 
 client = Anthropic(api_key=ANTHROPIC_KEY)
