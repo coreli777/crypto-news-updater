@@ -1,9 +1,15 @@
 steps:
 - name: 'python:3.11-slim'
   entrypoint: 'bash'
+  env:
+  - 'ANTHROPIC_API_KEY=$_ANTHROPIC_API_KEY'
+  - 'GITHUB_TOKEN=$_GITHUB_TOKEN'
   args:
   - '-c'
   - 'pip install anthropic httpx PyGithub && python news_updater.py'
 logsBucket: 'gs://chicago-bot-493519-cloudbuild-logs'
 options:
   logging: GCS_ONLY
+substitutions:
+  _ANTHROPIC_API_KEY: ''
+  _GITHUB_TOKEN: ''
